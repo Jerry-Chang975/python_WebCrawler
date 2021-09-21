@@ -9,7 +9,6 @@ web data extract
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time 
 
@@ -19,9 +18,7 @@ class BingoBingo:
         self.options = Options()
         self.options.add_argument("--disable-notifications") # 取消所有alert彈出視窗
         
-        self.browser = webdriver.Chrome(
-                    ChromeDriverManager().install(),
-                    chrome_options = self.options) # 瀏覽器
+        self.browser = webdriver.Chrome(chrome_options = self.options) # 瀏覽器
         self.browser.get(website)
     
     def web_data(self, month, date):
