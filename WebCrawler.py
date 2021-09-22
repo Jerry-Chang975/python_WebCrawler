@@ -7,9 +7,7 @@ lotto 爬蟲
 """
 from threading import Thread
 import tkinter as tk
-from tkinter import ttk
 
-import BingoBingo as BB
 from BingoBingo import BingoBingo, data_extract
 
 def closing():
@@ -72,7 +70,6 @@ def main_GUI():
     global win, Entry1_1, Entry1_2, Entry2_1, Entry2_2, Entry3_1, Entry3_2, Entry3_3, Entry3_4
     global Entry3_5, Entry3_6, Entry3_7, Entry3_8, Entry3_9, Entry3_10, Text2_1, Button3_1
     win = tk.Tk() 
-    path_ = tk.StringVar()
     win.tk.call('tk', 'scaling', 2.0)
     win.title('BingoBingo對獎') # 賦予標題名稱
     win.geometry('400x400+500+150') # 設定視窗大小 
